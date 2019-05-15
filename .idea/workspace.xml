@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d5b6f4a-a149-476d-abc7-39e3dfe203e2" name="Default Changelist" comment="" />
+    <list default="true" id="6d5b6f4a-a149-476d-abc7-39e3dfe203e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/evaluate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate13863074923824080534" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate16404019989766812040" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate17580373006681884453" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate1810877941638417975" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate215042928519321993" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate2359265313794760218" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate4401469595072684942" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate6571001164653306639" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate7032146375903986857" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate7835684551902785796" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate8592338907860735733" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate9245489787809244891" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate9365835138845475554" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.data-00000-of-00001.tempstate958041460129120057" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/results/test/model.weights/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/data/chars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HW2-named-entity-recognition/data/chars.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/data/korean_embedding.trimmed.npz" beforeDir="false" afterPath="$PROJECT_DIR$/HW2-named-entity-recognition/data/korean_embedding.trimmed.npz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/data/tags.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HW2-named-entity-recognition/data/tags.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2-named-entity-recognition/data/words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HW2-named-entity-recognition/data/words.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="384">
+              <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -25,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="240" selection-start-line="240" selection-end-line="240" />
+            <state relative-caret-position="459">
+              <caret line="385" column="17" selection-start-line="385" selection-start-column="17" selection-end-line="385" selection-end-column="17" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -35,22 +61,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/evaluate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state relative-caret-position="552">
+              <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
               <folding>
                 <element signature="e#25#37#0" expanded="true" />
               </folding>
@@ -96,6 +110,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="184" column="27" selection-start-line="184" selection-start-column="27" selection-end-line="184" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -117,16 +143,22 @@
       <find>train</find>
       <find>max</find>
       <find>nbatches</find>
+      <find>save</find>
+      <find>reload</find>
+      <find>predict</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/evaluate.py" />
         <option value="$PROJECT_DIR$/HW1-sequential-labeling/parsing.py" />
         <option value="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/train.py" />
-        <option value="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/model.py" />
         <option value="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/utils.py" />
+        <option value="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/model.py" />
+        <option value="$PROJECT_DIR$/HW2-named-entity-recognition/code_share/evaluate.py" />
       </list>
     </option>
   </component>
@@ -136,6 +168,7 @@
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -152,17 +185,6 @@
             <path>
               <item name="named-entity-recognition" type="b2602c69:ProjectViewProjectNode" />
               <item name="named-entity-recognition" type="462c0819:PsiDirectoryNode" />
-              <item name="HW1-sequential-labeling" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="named-entity-recognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="named-entity-recognition" type="462c0819:PsiDirectoryNode" />
-              <item name="HW1-sequential-labeling" type="462c0819:PsiDirectoryNode" />
-              <item name="result" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="named-entity-recognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="named-entity-recognition" type="462c0819:PsiDirectoryNode" />
               <item name="HW2-named-entity-recognition" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -175,7 +197,25 @@
               <item name="named-entity-recognition" type="b2602c69:ProjectViewProjectNode" />
               <item name="named-entity-recognition" type="462c0819:PsiDirectoryNode" />
               <item name="HW2-named-entity-recognition" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="code_share" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="named-entity-recognition" type="b2602c69:ProjectViewProjectNode" />
+              <item name="named-entity-recognition" type="462c0819:PsiDirectoryNode" />
+              <item name="HW2-named-entity-recognition" type="462c0819:PsiDirectoryNode" />
+              <item name="code_share" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="named-entity-recognition" type="b2602c69:ProjectViewProjectNode" />
+              <item name="named-entity-recognition" type="462c0819:PsiDirectoryNode" />
+              <item name="HW2-named-entity-recognition" type="462c0819:PsiDirectoryNode" />
+              <item name="code_share" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="model.weights" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -207,7 +247,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.model">
+  <component name="RunManager" selected="Python.evaluate">
     <configuration name="evaluate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="named-entity-recognition" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -294,9 +334,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.evaluate" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.train" />
-        <item itemvalue="Python.evaluate" />
         <item itemvalue="Python.parsing" />
       </list>
     </recent_temporary>
@@ -319,7 +359,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23076923" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3540569" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" weight="0.32936078" />
@@ -327,7 +367,7 @@
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50052685" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.19522777" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -499,42 +539,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-          <folding>
-            <element signature="e#25#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="384">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/model.py">
+    <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="240" selection-start-line="240" selection-end-line="240" />
+        <state relative-caret-position="209">
+          <caret line="184" column="27" selection-start-line="184" selection-start-column="27" selection-end-line="184" selection-end-column="27" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/utils.py">
+    <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+        <state relative-caret-position="459">
+          <caret line="385" column="17" selection-start-line="385" selection-start-column="17" selection-end-line="385" selection-end-column="17" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW2-named-entity-recognition/code_share/evaluate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

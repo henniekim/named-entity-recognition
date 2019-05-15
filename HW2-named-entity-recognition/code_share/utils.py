@@ -38,7 +38,7 @@ class Config():
     # training
     nepochs          = 10
     dropout          = 0.5
-    batch_size       = 5
+    batch_size       = 20
     lr               = 0.005 #learning rate
     lr_decay         = 0.9
     nepoch_no_imprv  = 3

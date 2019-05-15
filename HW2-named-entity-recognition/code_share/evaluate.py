@@ -2,8 +2,8 @@
 import model
 import utils
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+# reload(sys)
+# sys.setdefaultencoding('utf-8')
 #import tensorflow as tf
 
 
@@ -33,10 +33,10 @@ input_sent= ['23/SN', '일/NNB', '기성용/NNP', '의/JKG' ,'활약/NNG', '으�
 
 predicted_result = model.predict(input_sent)
 
+# for inseq, label in predicted_result :
+# 	print (inseq+" "+label)
 
-
-for inseq, label in predicted_result :
-	print (inseq+" "+label)
-
+for idx in range(len(predicted_result)):
+    print(input_sent[idx]+" " +predicted_result[idx])
 
 
