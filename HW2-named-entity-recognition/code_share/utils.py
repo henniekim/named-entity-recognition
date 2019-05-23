@@ -20,13 +20,13 @@ class Config():
     filename_embedding = "../data/korean_news_100MB_word2vec.txt".format(dim_word)
     filename_trimmed = "../data/korean_embedding.trimmed.npz".format(dim_word)
 
-    use_pretrained = False
-    use_chars = False
+    use_pretrained = True
+    use_chars = True
 
     # dataset
     filename_dev = "../data/NER_dev.txt"
     filename_test = "../data/NER_test.txt"
-    filename_train = "../data/NER_train_one-third.txt"
+    filename_train = "../data/NER_train.txt"
 
     max_iter = None # if not None, max number of examples in Dataset
 

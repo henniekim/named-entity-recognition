@@ -164,6 +164,12 @@ class NERmodel(object):
         self.lr = tf.placeholder(dtype=tf.float32, shape=[], name="lr")
         self.word_ids = tf.placeholder(tf.int32, shape=[None, None], name="words_ids")
 
+        if self.config.use_chars is True:
+            # 음절 자질 추가를 위한 변수 선언
+            print("use characters")
+            self.word_lengths = tf.placeholder(tf.int32, shape=[None, None], name="word_lengths")
+            self.char_ids = tf.placeholder(tf.int32, shape=[None, None, None], name="char_ids")
+
         # STEP 2
         with tf.variable_scope("words"):
 
@@ -176,13 +182,50 @@ class NERmodel(object):
                 _word_embeddings = tf.Variable(self.config.embeddings, name="_word_embeddings", dtype=tf.float32)
 
             word_embeddings = tf.nn.embedding_lookup(_word_embeddings, self.word_ids, name="word_embeddings")
-
             self.word_embeddings = word_embeddings
 
-        # STEP 3
+        with tf.variable_scope("chars"):
+            if self.config.use_chars is True:
+
+                _char_embeddings = tf.get_variable(name="_char_embeddings",
+                                                   dtype=tf.float32,
+                                                   shape=[self.config.nchars, self.config.dim_char])
+
+                char_embeddings = tf.nn.embedding_lookup(_char_embeddings, self.char_ids, name="char_embeddings")
+
+                dim_for_rnn = tf.shape(char_embeddings)
+                # dim_for_rnn[0] = batch size
+                # dim_for_rnn[1] = sentence length
+                # dim_for_rnn[2] = word length
+
+                char_embeddings = tf.reshape(char_embeddings, shape=[dim_for_rnn[0] * dim_for_rnn[1], dim_for_rnn[-2], self.config.dim_char])
+                word_lengths = tf.reshape(self.word_lengths, shape=[dim_for_rnn[0] * dim_for_rnn[1]])
+
+                cell_fw = tf.contrib.rnn.LSTMCell(self.config.hidden_size_char, state_is_tuple = True)
+                cell_bw = tf.contrib.rnn.LSTMCell(self.config.hidden_size_char, state_is_tuple = True)
+
+                _output = tf.nn.bidirectional_dynamic_rnn(cell_fw, cell_bw, char_embeddings,
+                                                                                    sequence_length=word_lengths,
+                                                                                    dtype=tf.float32)
+                _, ((_, output_fw), (_, output_bw)) = _output
+                output = tf.concat([output_fw, output_bw], axis=-1)
+
+                # 결과를 word embeddings 와 합치기 위해 reshape
+                output = tf.reshape(output, [dim_for_rnn[0], dim_for_rnn[1], 2 * self.config.hidden_size_char])
+
+                self.word_embeddings = tf.concat([self.word_embeddings, output], axis=-1)
+
+        self.word_embeddings = tf.nn.dropout(self.word_embeddings, self.dropout)
+
+
+        # 마지막 LSTM cell 의 결과만 가져오면 됨
         cell_fw = tf.contrib.rnn.LSTMCell(self.config.hidden_size_lstm)
         cell_bw = tf.contrib.rnn.LSTMCell(self.config.hidden_size_lstm)
-        (output_fw, output_bw), _ = tf.nn.bidirectional_dynamic_rnn(cell_fw, cell_bw, inputs = self.word_embeddings  , sequence_length = self.sequence_lengths , dtype=tf.float32)
+
+        (output_fw, output_bw), _ = tf.nn.bidirectional_dynamic_rnn(cell_fw, cell_bw,
+                                                                    inputs = self.word_embeddings ,
+                                                                    sequence_length = self.sequence_lengths ,
+                                                                    dtype=tf.float32)
 
         output = tf.concat([output_fw, output_bw], axis=-1)
         output = tf.nn.dropout(output, self.dropout)
@@ -191,10 +234,8 @@ class NERmodel(object):
 
         # STEP4
         output = tf.reshape(output, [-1, 2*self.config.hidden_size_lstm])
-        W = tf.get_variable( "W" , dtype=tf.float32,
-                    shape=[2*self.config.hidden_size_lstm,  self.config.ntags])
-        b = tf.get_variable( "b" , dtype=tf.float32,
-                    shape=[self.config.ntags], initializer=tf.zeros_initializer())
+        W = tf.get_variable( "W" , dtype=tf.float32, shape=[2*self.config.hidden_size_lstm,  self.config.ntags])
+        b = tf.get_variable( "b" , dtype=tf.float32, shape=[self.config.ntags], initializer=tf.zeros_initializer())
         pred = tf.matmul(output, W)+b
 
         self.logits = tf.reshape(pred, [-1, nsteps, self.config.ntags])
@@ -329,15 +370,25 @@ class NERmodel(object):
             dict {placeholder: value}
 
         """
-        # perform padding of the given data
 
-        word_ids, sequence_lengths = pad_sequences(words, 0)
+        if self.config.use_chars:
+            char_ids, word_ids = zip(*words)
+            char_ids, word_lengths = pad_sequences(char_ids, pad_tok=0, nlevels=2)
+            word_ids, sequence_lengths = pad_sequences(word_ids, 0)
+
+        else :
+            # perform padding of the given data
+            word_ids, sequence_lengths = pad_sequences(words, 0)
 
         # build feed dictionary
         feed = {
             self.word_ids: word_ids,
             self.sequence_lengths: sequence_lengths
         }
+
+        if self.config.use_chars:
+            feed[self.char_ids] = char_ids
+            feed[self.word_lengths] = word_lengths
 
         if labels is not None:
             labels, _ = pad_sequences(labels, 0)
